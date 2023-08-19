@@ -1,0 +1,7 @@
+version: '3'
+services:
+  my-flask-app:
+    build: .
+    container_name: py_docker_container
+    ports:
+      - "5001:5001"

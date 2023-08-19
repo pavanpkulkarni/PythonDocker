@@ -1,0 +1,20 @@
+
+docker build -t my_py_img .
+docker tag <image_id>> pavanpkulkarni/<image_name>>:<version>
+
+
+=== Create Image ===
+docker-compose up --build
+
+=== Tag and Push the Image to Hub ===
+docker tag 572ce79d63c6 pavanpkulkarni/pythondocker-my-flask-app:1.1
+
+=== To pull docker ===
+docker pull pavanpkulkarni/pythondocker-my-flask-app:1.1
+
+=== Run Flask App ===
+docker run --publish 5001:5001 pavanpkulkarni/pythondocker-my-flask-app:1.1
+
+=== SSH into Container ===
+docker exec -it <container name> /bin/bash
+
